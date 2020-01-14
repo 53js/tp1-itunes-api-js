@@ -1,0 +1,23 @@
+{
+  "name": "tp1-itunes-api",
+  "version": "1.0.0",
+  "description": "TP1 correction \"iTunes API\" from JavaScript Client-Side course\"",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/53js/tp1-itunes-api-js.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "fetch"
+  ],
+  "author": "53js",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/53js/tp1-itunes-api-js/issues"
+  },
+  "homepage": "https://github.com/53js/tp1-itunes-api-js#readme"
+}
