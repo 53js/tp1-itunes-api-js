@@ -29,7 +29,9 @@ const fetchItunesSongs = async (term) => {
  * @param {object} event
  */
 const handleClickSong = (event) => {
-	const target = event.target;
+	// on utilise currentTarget pour être sur d'avoir le DIV
+	// même si on a cliqué sur un des enfants (le h1 par ex)
+	const target = event.currentTarget;
 	console.log(target);
 	if (target.tagName !== 'LI' && !target.getAttribute('data-preview')) {
 		return;
