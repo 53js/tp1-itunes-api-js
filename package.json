@@ -4,6 +4,7 @@
   "description": "TP1 correction \"iTunes API\" from JavaScript Client-Side course\"",
   "main": "index.html",
   "scripts": {
+    "start": "serve .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/53js/tp1-itunes-api-js/issues"
   },
-  "homepage": "https://github.com/53js/tp1-itunes-api-js#readme"
+  "homepage": "https://github.com/53js/tp1-itunes-api-js#readme",
+  "devDependencies": {
+    "serve": "^13.0.2"
+  }
 }
