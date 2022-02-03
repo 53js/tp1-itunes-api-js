@@ -14,7 +14,7 @@ const fetchItunesSongs = async (term) => {
 	try {
 		const url = `${API}?term=${term}`;
 		const response = await fetch(url);
-		console.log(response)
+		console.log(response);
 		const responseJson = await response.json();
 		return responseJson;
 	} catch (err) {
