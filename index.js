@@ -13,7 +13,7 @@ const songsList = document.querySelector('.results');
  */
 const fetchItunesSongs = async (term) => {
 	try {
-		const url = `${API}?term=${term}`;
+		const url = `${API}?term=${term}&test=${Math.random()}`;
 		const response = await fetch(url);
 		console.log(response);
 		const responseJson = await response.json();
