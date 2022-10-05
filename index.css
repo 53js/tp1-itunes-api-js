@@ -71,6 +71,10 @@ html {
 .app p.no-result {
 	display: none;
 }
+.app p.error {
+	display: none;
+	color: red;
+}
 
 .player {
 	position: fixed;

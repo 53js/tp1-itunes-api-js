@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const API = 'https://itunes.apple.com/search';
 
 const audioTag = document.querySelector('audio');
@@ -19,6 +20,7 @@ const fetchItunesSongs = async (term) => {
 		return responseJson;
 	} catch (err) {
 		console.log(err);
+		throw err;
 	}
 };
 
@@ -67,8 +69,16 @@ const search = async () => {
 	songsList.innerHTML = '';
 
 	searchValue = searchValue.replace(' ', '+');
-	const response = await fetchItunesSongs(searchValue);
+	let response;
+	try {
+		response = await fetchItunesSongs(searchValue);
+	} catch (err) { // affichage des erreurs éventuelles
+		document.querySelector('.error').style.display = 'block';
+		document.querySelector('.no-result').style.display = 'none';
+		return;
+	}
 	if (response.resultCount) {
+		document.querySelector('.error').style.display = 'none';
 		document.querySelector('.no-result').style.display = 'none';
 		const songs = response.results.filter((r) => r.kind === 'song');
 		const ul = document.createElement('ul');
@@ -78,6 +88,7 @@ const search = async () => {
 		songsList.appendChild(ul);
 	} else {
 		document.querySelector('.no-result').style.display = 'block';
+		document.querySelector('.error').style.display = 'none';
 	}
 };
 
@@ -93,7 +104,3 @@ searchInput.addEventListener('keypress', (e) => {
 searchBtn.addEventListener('click', search);
 // bind the click on result list
 songsList.addEventListener('click', handleClickSong);
-
-(function main() {
-	console.log('--- main ---');
-})();
