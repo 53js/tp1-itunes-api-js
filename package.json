@@ -22,6 +22,9 @@
   },
   "homepage": "https://github.com/53js/tp1-itunes-api-js#readme",
   "devDependencies": {
-    "serve": "^13.0.2"
+    "serve": "^13.0.2",
+    "eslint": "^8.20.0",
+    "eslint-config-53js": "^2.0.0",
+    "eslint-plugin-import": "2.26.0"
   }
 }
